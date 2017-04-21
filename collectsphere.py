@@ -473,7 +473,8 @@ def create_environment(config):
     if len(performance_manager.historicalInterval) is not 0:
         performance_interval = performance_manager.historicalInterval[0]
         samplingPeriod = performance_interval.samplingPeriod
-        performance_interval.level = 2
+        if performance_interval.level < 2:
+            performance_interval.level = 2
 
         # Update performance interval to get all rolluptypes
         performance_manager.UpdatePerfInterval(performance_interval)
