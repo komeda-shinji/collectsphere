@@ -306,7 +306,7 @@ def collet_metrics_for_entities(service_instance, performance_manager,
                     ).timetuple()
                 ))
 
-                entity = entities[perf_entity_metric_count]
+                entity = perf_entity_metric.entity
 
                 # When the instance value is empty, the vSphere API references a
                 # total. Example: A host has multiple cores for each of which we
